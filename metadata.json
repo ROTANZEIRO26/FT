@@ -1,0 +1,8 @@
+{
+  "name": "FORÇA TATICA DO CERRADO",
+  "description": "APP CHECAGEM RT26",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}

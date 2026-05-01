@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "CheckRecord": {
+      "title": "Check Record",
+      "description": "Information about a person checked during a police approach.",
+      "type": "object",
+      "properties": {
+        "fullName": { "type": "string", "description": "Nome completo do abordado" },
+        "cpf": { "type": "string", "description": "CPF" },
+        "rg": { "type": "string", "description": "RG" },
+        "birthDate": { "type": "string", "description": "Data de nascimento" },
+        "motherName": { "type": "string", "description": "Nome da mãe" },
+        "fatherName": { "type": "string", "description": "Nome do pai" },
+        "address": { "type": "string", "description": "Endereço" },
+        "naturality": { "type": "string", "description": "Naturalidade" },
+        "criminalRecords": { "type": "string", "description": "Passagens criminais" },
+        "photo": { "type": "string", "description": "Foto em base64" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string", "description": "UID do policial" }
+      },
+      "required": ["fullName", "cpf", "createdAt", "createdBy"]
+    }
+  },
+  "firestore": {
+    "/checks/{checkId}": {
+      "schema": "CheckRecord",
+      "description": "Collection of police approach records."
+    }
+  }
+}
